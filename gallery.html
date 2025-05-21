@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="معرض صور دورة الباتيسري فين - شاهد إبداعات المتدربين وأعمالهم">
+  <meta name="keywords" content="باتيسري, حلويات, معرض صور, كعك, تعليم">
+  <title>معرض صور دورة الباتيسري فين</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>معرض صور الباتيسري فين</h1>
+        </div>
+        <nav class="main-nav">
+          <button class="mobile-menu-toggle" aria-label="القائمة">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+            <li><a href="index.html#course-content" class="nav-link">محتوى الدورة</a></li>
+            <li><a href="index.html#benefits" class="nav-link">المميزات</a></li>
+            <li><a href="index.html#contact" class="nav-link">تواصل معنا</a></li>
+            <li><a href="gallery.html" class="nav-link active">معرض الصور</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Gallery Header -->
+  <section class="gallery-header">
+    <div class="container">
+      <h2 class="section-title">معرض إبداعات الباتيسري</h2>
+      <p class="section-description">استمتع بمشاهدة أعمال المتدربين والإبداعات الفرنسية الأصيلة</p>
+      
+      <!-- Gallery Filters -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">الكل</button>
+        <button class="filter-btn" data-filter="cakes">كيك</button>
+        <button class="filter-btn" data-filter="pastries">معجنات</button>
+        <button class="filter-btn" data-filter="desserts">حلويات</button>
+        <button class="filter-btn" data-filter="bread">خبز</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="gallery-grid">
+    <div class="container">
+      <div class="gallery-container">
+        <!-- Gallery Items -->
+        <div class="gallery-item" data-category="cakes">
+          <img src="https://images.pexels.com/photos/14705177/pexels-photo-14705177.jpeg?auto=compress&cs=tinysrgb&w=600" alt="كعكة الشوكولاتة" loading="lazy" data-full="https://images.pexels.com/photos/14705177/pexels-photo-14705177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>كعكة الشوكولاتة</h3>
+            <p>كعكة الشوكولاتة الفاخرة مع الغاناش</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="pastries">
+          <img src="https://images.pexels.com/photos/2905244/pexels-photo-2905244.jpeg?auto=compress&cs=tinysrgb&w=600" alt="كرواسون" loading="lazy" data-full="https://images.pexels.com/photos/2905244/pexels-photo-2905244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>كرواسون</h3>
+            <p>كرواسون مقرمش بالزبدة الفرنسية</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="desserts">
+          <img src="https://images.pexels.com/photos/4099237/pexels-photo-4099237.jpeg?auto=compress&cs=tinysrgb&w=600" alt="كريم بروليه" loading="lazy" data-full="https://images.pexels.com/photos/4099237/pexels-photo-4099237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>كريم بروليه</h3>
+            <p>كريم بروليه بطبقة من السكر المكرمل</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="bread">
+          <img src="https://images.pexels.com/photos/1756061/pexels-photo-1756061.jpeg?auto=compress&cs=tinysrgb&w=600" alt="خبز الباجيت" loading="lazy" data-full="https://images.pexels.com/photos/1756061/pexels-photo-1756061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>خبز الباجيت</h3>
+            <p>خبز الباجيت الفرنسي التقليدي</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="cakes">
+          <img src="https://images.pexels.com/photos/13316143/pexels-photo-13316143.jpeg?auto=compress&cs=tinysrgb&w=600" alt="تارت الفواكه" loading="lazy" data-full="https://images.pexels.com/photos/13316143/pexels-photo-13316143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>تارت الفواكه</h3>
+            <p>تارت الفواكه الموسمية الطازجة</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="pastries">
+          <img src="https://images.pexels.com/photos/12966115/pexels-photo-12966115.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ماكارون" loading="lazy" data-full="https://images.pexels.com/photos/12966115/pexels-photo-12966115.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>ماكارون</h3>
+            <p>ماكارون فرنسي بألوان ونكهات متنوعة</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="desserts">
+          <img src="https://images.pexels.com/photos/15539487/pexels-photo-15539487/free-photo-of-pastry-tart-and-coffee-on-table.jpeg?auto=compress&cs=tinysrgb&w=600" alt="إكلير" loading="lazy" data-full="https://images.pexels.com/photos/15539487/pexels-photo-15539487/free-photo-of-pastry-tart-and-coffee-on-table.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>إكلير</h3>
+            <p>إكلير بحشوة الكريمة والشوكولاتة</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="bread">
+          <img src="https://images.pexels.com/photos/5454006/pexels-photo-5454006.jpeg?auto=compress&cs=tinysrgb&w=600" alt="بريوش" loading="lazy" data-full="https://images.pexels.com/photos/5454006/pexels-photo-5454006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>بريوش</h3>
+            <p>خبز البريوش الغني بالزبدة</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="cakes">
+          <img src="https://images.pexels.com/photos/5846189/pexels-photo-5846189.jpeg?auto=compress&cs=tinysrgb&w=600" alt="أوبرا كيك" loading="lazy" data-full="https://images.pexels.com/photos/5846189/pexels-photo-5846189.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>أوبرا كيك</h3>
+            <p>كعكة الأوبرا الفرنسية متعددة الطبقات</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="pastries">
+          <img src="https://images.pexels.com/photos/4686833/pexels-photo-4686833.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ميل فاي" loading="lazy" data-full="https://images.pexels.com/photos/4686833/pexels-photo-4686833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>ميل فاي</h3>
+            <p>حلوى الألف ورقة بكريمة الفانيليا</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="desserts">
+          <img src="https://images.pexels.com/photos/3669573/pexels-photo-3669573.jpeg?auto=compress&cs=tinysrgb&w=600" alt="موس الشوكولاتة" loading="lazy" data-full="https://images.pexels.com/photos/3669573/pexels-photo-3669573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>موس الشوكولاتة</h3>
+            <p>موس الشوكولاتة الفاخر</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="bread">
+          <img src="https://images.pexels.com/photos/1070946/pexels-photo-1070946.jpeg?auto=compress&cs=tinysrgb&w=600" alt="خبز بالزيتون" loading="lazy" data-full="https://images.pexels.com/photos/1070946/pexels-photo-1070946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>خبز بالزيتون</h3>
+            <p>خبز ريفي بالزيتون والأعشاب</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="cakes">
+          <img src="https://images.pexels.com/photos/806363/pexels-photo-806363.jpeg?auto=compress&cs=tinysrgb&w=600" alt="تشيز كيك" loading="lazy" data-full="https://images.pexels.com/photos/806363/pexels-photo-806363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>تشيز كيك</h3>
+            <p>تشيز كيك بالفواكه الحمراء</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="pastries">
+          <img src="https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=600" alt="باريسيان" loading="lazy" data-full="https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>باريسيان</h3>
+            <p>معجنات باريسيان بالشوكولاتة</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="desserts">
+          <img src="https://images.pexels.com/photos/960540/pexels-photo-960540.jpeg?auto=compress&cs=tinysrgb&w=600" alt="كريم كراميل" loading="lazy" data-full="https://images.pexels.com/photos/960540/pexels-photo-960540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750">
+          <div class="gallery-item-overlay">
+            <h3>كريم كراميل</h3>
+            <p>كريم كراميل بصلصة الكراميل</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img">
+      <div class="lightbox-caption"></div>
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous">&lsaquo;</button>
+      <button class="lightbox-next" aria-label="Next">&rsaquo;</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>دورة الباتيسري فين</h3>
+          <p>دورة متكاملة لتعلم فنون صناعة الحلويات الفرنسية</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="index.html#course-content">محتوى الدورة</a></li>
+            <li><a href="index.html#benefits">المميزات</a></li>
+            <li><a href="index.html#contact">تواصل معنا</a></li>
+            <li><a href="gallery.html">معرض الصور</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>تواصل معنا</h4>
+          <address>
+            <p>العنوان: شارع الباتيسري، المدينة</p>
+            <p>الهاتف: 1234-567-789</p>
+            <p>البريد الإلكتروني: info@patisseriefine.com</p>
+          </address>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 دورة الباتيسري فين. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Utility Classes */
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.3s;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.6s;
+}
+
+.animate-slide-in {
+  animation: slideInRight 1s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Animated Elements */
+.section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.course-card, .benefit-card, .gallery-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.course-card.visible, .benefit-card.visible, .gallery-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Animations for Cards */
+.course-card:nth-child(1),
+.benefit-card:nth-child(1),
+.gallery-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.course-card:nth-child(2),
+.benefit-card:nth-child(2),
+.gallery-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.course-card:nth-child(3),
+.benefit-card:nth-child(3),
+.gallery-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.course-card:nth-child(4),
+.benefit-card:nth-child(4),
+.gallery-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.course-card:nth-child(5),
+.benefit-card:nth-child(5),
+.gallery-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.course-card:nth-child(6),
+.benefit-card:nth-child(6),
+.gallery-item:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+/* Button Hover Animation */
+.cta-button, .submit-btn, .view-more-button, .filter-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before, .submit-btn::before, .view-more-button::before, .filter-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.cta-button:hover::before, .submit-btn:hover::before, .view-more-button:hover::before, .filter-btn:hover::before {
+  left: 100%;
+}
+
+/* Mobile Menu Animation */
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Form Input Focus Animation */
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(250, 211, 211, 0.3);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Testimonial Slider Animation */
+.testimonial-card {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.testimonial-card.hidden {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.testimonial-card.previous {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: translateX(0);
+}
