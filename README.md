@@ -93,3 +93,87 @@ Design Elements:
     Consistent 8px spacing system with ample whitespace (minimum 1.5rem between sections)
     Sticky navigation header with smooth scroll functionality
     Apple-inspired minimalist aesthetic with attention to detail and refined interactions
+
+---
+
+You are an expert Django developer and architect. I will provide you with a folder of static HTML/CSS/JS theme pages. Your task is to scaffold a complete Django project and one reusable app that:
+
+1. **Project setup**
+
+   - Creates a new Django project named `pasteries`.
+   - Uses Python 3.10+ and Django 4.x.
+   - Configures settings for `INSTALLED_APPS`, `TEMPLATES`, `STATICFILES_DIRS`, `MEDIA_URL`/`MEDIA_ROOT`, and a SQLite database.
+
+2. **App scaffolding**
+
+   - Creates a Django app named `pages`.
+   - Registers it in the project’s `settings.py`.
+
+3. **Models**
+
+   - From the provided specification `<<data_model_spec>>`, generate Django `models.py` with:
+     - Field types, verbose names, proper relationships (`ForeignKey`, `ManyToManyField`, `OneToOneField`).
+     - `__str__` methods.
+     - Meta options (ordering, verbose_name).
+
+4. **Admin**
+
+   - In `admin.py`, register all models with:
+     - Custom `ModelAdmin` classes that define `list_display`, `search_fields`, `list_filter`, and any inline related models.
+
+5. **Forms**
+
+   - In `forms.py`, create:
+     - ModelForms for create/update views.
+     - Any custom validation or `clean_<field>()` methods as needed by the spec.
+
+6. **URLs & Views**
+
+   - In `pages/urls.py`, define URL patterns for:
+     - List, Detail, Create, Update, Delete views.
+   - In the app’s `views.py`, implement each view as class­based views (e.g., `ListView`, `DetailView`, `CreateView`, etc.).
+   - Apply any access controls (e.g., `LoginRequiredMixin`, `PermissionRequiredMixin`) based on the spec.
+
+7. **Templates**
+
+   - Copy your provided HTML theme files into the appropriate subfolders under `templates/pages/`.
+   - Convert them to Django templates by:
+     - Extending a base template (`base.html`).
+     - Converting static asset links (`<link href="/css/style.css">`) to `{% static 'css/style.css' %}`.
+     - Replacing repeated sections (navbar, footer) with `{% include 'partials/navbar.html' %}` etc.
+   - Ensure you generate:
+     - `templates/base.html` (with block definitions: `head`, `title`, `content`, `scripts`)
+     - `templates/partials/` for header, navbar, footer, and any theme components.
+     - `templates/pages/` for List, Detail, Form, and Confirm Delete pages.
+
+8. **Static files**
+
+   - Place theme CSS/JS/images into `static/pasteries/css/`, `js/`, and `images/`.
+
+9. **Admin base templates (Optional)**
+
+   - Provide an admin override in `templates/admin/base_site.html` that matches the theme’s look and feel (logo, colors).
+
+10. **README**
+    - Generate a `README.md` with project description, setup instructions (`pip install -r requirements.txt`, `python manage.py migrate`, `runserver`), and notes on structure.
+
+**Constraints & Best Practices**
+
+- Follow PEP8 and Django conventions.
+- Use `{% url %}` template tags, not hard-coded links.
+- Keep view logic minimal; push complexity into models/managers/forms.
+- Use `get_absolute_url()` on models for redirects.
+
+---
+
+Please output:
+
+1. A shell script or CLI commands to scaffold the project/app.
+2. The complete file tree with file contents for:
+   - `project_name/`
+   - `settings.py`, `urls.py`, `wsgi.py`
+   - `app_name/` (`models.py`, `views.py`, `forms.py`, `urls.py`, `admin.py`)
+   - `templates/` and `static/` structure with converted templates.
+3. A `requirements.txt`.
+
+Begin by outlining the project layout you will create, then provide the code files.
